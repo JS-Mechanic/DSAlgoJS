@@ -13,6 +13,7 @@ function f1(array) {
   console.log(array[0]);  // Runtime complexity: O(1)
 }
 f1(arr1);
+// Overall runtime complexity: O(1)
 
 
 // Example 2:
@@ -21,7 +22,8 @@ function f2(array) {
   console.log(array[0]);   // Runtime complexity: O(1)
   console.log(array[1]);   // Runtime complexity: O(1)
 }
-f2(arr2); // Overall runtime complexity: O(1)
+f2(arr2);
+// Overall runtime complexity: O(1)
 
 
 // Example 3:
