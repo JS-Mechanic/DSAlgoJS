@@ -77,3 +77,17 @@ function f6(array) {
 }
 f6(arr1);
 // Overall runtime complexity: O(n + n ^ 2) = O(n ^ 2)
+
+
+// Example 7:
+function f7(array) {
+  for (let i = 0; i < array.length; i++) {  // O(n)
+    for (let j = 0; j < array.length; j++) {  // O(n)
+      for (let k = 0; k < array.length; k++) {  // O(n)
+        console.log(`(${i}, ${j}, ${k})`);
+      }
+    }
+  }
+}
+f7(arr1);
+// Overall runtime complexity: O(n * n * n) = O(n * 3) Cubic
