@@ -85,3 +85,14 @@ function compressBoxesTwiceV2(boxes1, boxes2) {
 // Overall runtime complexity: O(n + m)
 compressBoxesTwiceV2([1, 2, 3, 4], [5, 6, 7, 8, 9]);
 ////////////////////////////////////////////////////////////////////////////////////
+// Log all pairs of array:
+const alphabets = ["a", "b", "c", "d", "e"];
+function logAllPairsOfArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      console.log(`(${array[i]}, ${array[j]})`);
+    }
+  }
+}
+logAllPairsOfArray(alphabets);
+////////////////////////////////////////////////////////////////////////////////////
