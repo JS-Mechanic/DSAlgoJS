@@ -78,3 +78,10 @@ function compressBoxesTwice(boxes) {
 // Overall runtime complexity: O(2n) = O(n)
 compressBoxesTwice([1, 2, 3, 4]);
 ////////////////////////////////////////////////////////////////////////////////////
+function compressBoxesTwiceV2(boxes1, boxes2) {
+  boxes1.forEach(box => console.log(box)); // O(n)
+  boxes2.forEach(box => console.log(box)); // O(m)
+}
+// Overall runtime complexity: O(n + m)
+compressBoxesTwiceV2([1, 2, 3, 4], [5, 6, 7, 8, 9]);
+////////////////////////////////////////////////////////////////////////////////////
