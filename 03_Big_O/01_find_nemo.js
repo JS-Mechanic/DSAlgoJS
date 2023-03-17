@@ -15,3 +15,28 @@ function printAllNumbersAndThenAllPairSums(numbers) {
 printAllNumbersAndThenAllPairSums([1, 2, 3, 4, 5]);
 // Overall runtime complexity: O(n + n^2) = O(n^2)
 ////////////////////////////////////////////////////////////////////////////////////
+
+// Space complexity:
+function boooooo(n) {
+    for (let i = 0; i < n.length; i++) {
+        console.log("boooooo");
+    }
+}
+
+boooooo([1, 2, 3, 4, 5]);
+// Space complexity is: O(1)
+
+////////////////////////////////////////////////////////////////////////////////////
+
+function arrayOfHiNTimes(n) {
+    let arrayHi = [];
+    for (let i = 0; i < n; i++) {
+        arrayHi[i] = "Hi";
+    }
+    return arrayHi;
+}
+
+console.log(arrayOfHiNTimes(6));
+// Space complexity is: O(n)
+
+////////////////////////////////////////////////////////////////////////////////////
