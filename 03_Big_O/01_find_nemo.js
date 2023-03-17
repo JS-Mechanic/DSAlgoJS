@@ -66,3 +66,12 @@ const tweets = [
 // Time complexity is: O(n^2)
 
 ////////////////////////////////////////////////////////////////////////////////////
+
+// What is the time complexity of the following code:
+
+"HelloFromJavaScript".length;
+
+// That depends on built in method implementation but since javascript strings has length property
+// So the time complexity is: O(1)
+
+////////////////////////////////////////////////////////////////////////////////////
