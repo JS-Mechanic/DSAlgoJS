@@ -47,3 +47,22 @@ console.log(array.at(0));   // O(1)
 console.log(array.at(-1));  // O(1)
 
 ////////////////////////////////////////////////////////////////////////////////////
+
+// Compare tweets based on their date:
+const tweets = [
+    {
+        tweet: "Hi",
+        date: 2021
+    },
+    {
+        tweet: "From",
+        date: 2022
+    },
+    {
+        tweet: "JavaScript",
+        date: 2023
+    }
+];
+// Time complexity is: O(n^2)
+
+////////////////////////////////////////////////////////////////////////////////////
