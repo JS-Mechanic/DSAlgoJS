@@ -75,3 +75,7 @@ const tweets = [
 // So the time complexity is: O(1)
 
 ////////////////////////////////////////////////////////////////////////////////////
+
+// Test data:
+const first = ["a", "b", "c", "d", "x"];
+const second = ["e", "f", "g", "x"];
