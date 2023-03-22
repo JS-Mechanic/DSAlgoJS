@@ -79,3 +79,17 @@ const tweets = [
 // Test data:
 const first = ["a", "b", "c", "d", "x"];
 const second = ["e", "f", "g", "x"];
+
+// First way - critical - Not efficient:
+function containsCommonItem(arr1, arr2) {
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) return true
+        }
+    }
+    return false;
+}
+
+console.log(containsCommonItem(first, second));
+// Time complexity is: O(a*b) - because array1.length is not equal to array2.length
+////////////////////////////////////////////////////////////////////////////////////
