@@ -117,4 +117,15 @@ console.log(containsCommonItemV2(first, second));
 // Time complexity is: O(a+b)
 // Space complexity is: O(a) - because of storing array1 into an object.
 
+
+
+// Third Solution - Most efficient - Using javascript builtin methods:
+function containsCommonItemV3(arr1, arr2) {
+    return arr1.some(item => arr2.includes(item));
+}
+
+console.log(containsCommonItemV3(first, second));
+// Time complexity is: O(a+b)
+// Space complexity is: O(1) - because of defining a function.
+
 ////////////////////////////////////////////////////////////////////////////////////
