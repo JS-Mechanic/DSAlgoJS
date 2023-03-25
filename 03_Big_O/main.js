@@ -91,5 +91,7 @@ function containsCommonItem(arr1, arr2) {
 }
 
 console.log(containsCommonItem(first, second));
-// Time complexity is: O(a*b) - because array1.length is not equal to array2.length
+// Time complexity is: O(a*b) - because array1.length is not equal to array2.length.
+// Space complexity is: O(1) - because of defining a function.
+
 ////////////////////////////////////////////////////////////////////////////////////
