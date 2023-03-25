@@ -80,7 +80,7 @@ const tweets = [
 const first = ["a", "b", "c", "d", "x"];
 const second = ["e", "f", "g", "x"];
 
-// First way - critical - Not efficient:
+// First Solution - critical - Not efficient:
 function containsCommonItem(arr1, arr2) {
     for (let i = 0; i < arr1.length; i++) {
         for (let j = 0; j < arr2.length; j++) {
@@ -93,5 +93,28 @@ function containsCommonItem(arr1, arr2) {
 console.log(containsCommonItem(first, second));
 // Time complexity is: O(a*b) - because array1.length is not equal to array2.length.
 // Space complexity is: O(1) - because of defining a function.
+
+
+
+// Second Solution - Efficient - Using hash tables:
+function containsCommonItemV2(arr1, arr2) {
+    let map = {};
+    for (let i = 0; i <arr1.length; i++) {
+        if (!map[arr1[i]]) {
+            const item = arr1[i];
+            map[item] = true;
+        }
+    }
+    for (let j = 0; j < arr2.length; j++) {
+        if (map[arr2[j]]) {
+            return true;
+        }
+    }
+    return false;
+}
+
+console.log(containsCommonItemV2(first, second));
+// Time complexity is: O(a+b)
+// Space complexity is: O(a) - because of storing array1 into an object.
 
 ////////////////////////////////////////////////////////////////////////////////////
