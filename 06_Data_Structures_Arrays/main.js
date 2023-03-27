@@ -18,3 +18,10 @@ const stringsArray = ["a", "b", "c", "d"];
 * 8 times 4 = 32 bytes will be used for array above
 *
 * */
+
+// Array methods:
+stringsArray.push("e");   // O(1) | O(n) - O(1) if the array has room to fit the new element
+                          // And O(n) if it needs to allocate more space.
+stringsArray.pop();   // O(1)
+stringsArray.unshift("x");    // O(n)—Looping over items and reassigning the indexes
+stringsArray.splice(2, 0, "alien");   // O(n)—Adding “alien” to the middle
