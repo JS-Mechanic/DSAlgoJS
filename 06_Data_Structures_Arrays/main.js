@@ -65,3 +65,10 @@ class CustomArray {
     this.length--;
   }
 }
+
+const array = new CustomArray();
+array.push("Hi").push("there").push("!").push("How");
+array.delete(1).push("are");
+console.log(array);
+
+////////////////////////////////////////////////////////////////////////////////////
