@@ -25,3 +25,43 @@ stringsArray.push("e");   // O(1) | O(n) - O(1) if the array has room to fit the
 stringsArray.pop();   // O(1)
 stringsArray.unshift("x");    // O(n)—Looping over items and reassigning the indexes
 stringsArray.splice(2, 0, "alien");   // O(n)—Adding “alien” to the middle
+
+
+// Building an array from scratch:
+class CustomArray {
+  constructor() {
+    this.length = 0;
+    this.data = {};
+  }
+  
+  get(index) {
+    return this.data[index];
+  }
+  
+  push(item) {
+    this.data[this.length] = item;
+    this.length++;
+    return this;
+  }
+  
+  pop() {
+    const lastItem = this.data[this.length - 1];
+    delete this.data[this.length - 1];
+    this.length--;
+    return lastItem;
+  }
+  
+  delete(index) {
+    const item = this.data[index];
+    this.shiftItems(index);
+    return this;
+  }
+  
+  shiftItems(index) {
+    for (let i = index; i < this.length - 1; i++) {
+      this.data[i] = this.data[i + 1];
+    }
+    delete this.data[this.length - 1];
+    this.length--;
+  }
+}
