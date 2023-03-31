@@ -52,8 +52,9 @@ class CustomArray {
   }
   
   delete(index) {
-    const item = this.data[index];
     this.shiftItems(index);
+    delete this.data[this.length - 1];
+    this.length--;
     return this;
   }
   
@@ -61,14 +62,12 @@ class CustomArray {
     for (let i = index; i < this.length - 1; i++) {
       this.data[i] = this.data[i + 1];
     }
-    delete this.data[this.length - 1];
-    this.length--;
   }
 }
 
 const array = new CustomArray();
-array.push("Hi").push("there").push("!").push("How");
-array.delete(1).push("are");
+array.push("Hi").push("there").push("!").push("How").push("are").push("you");
+array.delete(1);
 console.log(array);
 
 ////////////////////////////////////////////////////////////////////////////////////
