@@ -71,3 +71,13 @@ array.delete(1);
 console.log(array);
 
 ////////////////////////////////////////////////////////////////////////////////////
+// Coding Exercise:
+// Write a function that reverses a string:
+
+function reverseStr(string) {
+  return Array.from(string).reverse().join("");
+}
+
+console.log(reverseStr("Milad Sadeghi DM"));
+
+////////////////////////////////////////////////////////////////////////////////////
