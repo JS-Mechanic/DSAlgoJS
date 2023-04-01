@@ -70,14 +70,38 @@ array.push("Hi").push("there").push("!").push("How").push("are").push("you");
 array.delete(1);
 console.log(array);
 
+console.log("-".repeat(50));
 ////////////////////////////////////////////////////////////////////////////////////
 // Coding Exercise:
 // Write a function that reverses a string:
 
-function reverseStr(string) {
-  return Array.from(string).reverse().join("");
+// Version #1:
+function reverseStrV1(string) {
+  if (typeof string !== "string") return 0;
+  if (string.length < 2) return string;
+  const backwards = [];
+  const totalItems = string.length - 1;
+  for (let i = totalItems; i >= 0; i--) { backwards.push(string[i]) }
+  return backwards.join("");
 }
 
-console.log(reverseStr("Milad Sadeghi DM"));
+// Version #2:
+const reverseStrV2 = string => Array.from(string).reverse().toString().replaceAll(",", "");
 
+// Version #3:
+const reverseStrV3 = string => Array.from(string).reverse().join("");
+
+// Version #4:
+const reverseStrV4 = string => string.split("").reverse().join("");
+
+// Version #5:
+const reverseStrV5 = string => [...string].reverse().join("");
+
+console.log(reverseStrV1("Milad Sadeghi DM"));
+console.log(reverseStrV2("Milad Sadeghi DM"));
+console.log(reverseStrV3("Milad Sadeghi DM"));
+console.log(reverseStrV4("Milad Sadeghi DM"));
+console.log(reverseStrV5("Milad Sadeghi DM"));
+
+console.log("-".repeat(50));
 ////////////////////////////////////////////////////////////////////////////////////
