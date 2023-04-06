@@ -1,1 +1,19 @@
 "use strict";
+
+////////////////////////////////////////////////////////////////////////////////////
+// JavaScript Object As Hash Table:
+const user = {
+	age: 26,
+	name: "John",
+	magic: true,
+	scream() {
+		console.log("Ahhhhhhh....");
+	}
+}
+
+console.log(user.age);  // O(1)
+user.spell = "John John";   // O(1)
+console.log(user);
+user.scream();  // O(1)
+
+////////////////////////////////////////////////////////////////////////////////////
