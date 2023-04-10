@@ -78,6 +78,10 @@ class HashTable {
 const ht = new HashTable(50);
 
 ht.set("grapes", 1000);
+ht.set("oranges", 20);
+ht.set("apples", 10);
 console.log(ht.get("grapes"));
+console.log(ht.keys());
+console.log(ht.values());
 
 ////////////////////////////////////////////////////////////////////////////////////
