@@ -85,3 +85,23 @@ console.log(ht.keys());
 console.log(ht.values());
 
 ////////////////////////////////////////////////////////////////////////////////////
+// Google Interview Question:
+// Given array: [2, 5, 1, 2, 3, 5, 1, 2, 4];
+// It should return 2.
+
+
+const firstOccurringItem = function (array) {   // Time Complexity: O(n)
+	const itemsObj = {};                        // Space Complexity: O(n)
+	for (let i = 0; i < array.length; i++) {
+		if (itemsObj[array[i]]) {
+			return array[i];
+		} else {
+			itemsObj[array[i]] = true;
+		}
+	}
+	return undefined;
+}
+
+console.log(firstOccurringItem([2, 5, 1, 5, 2, 3, 5, 1, 2, 4]));
+
+////////////////////////////////////////////////////////////////////////////////////
