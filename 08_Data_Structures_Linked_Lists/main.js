@@ -20,3 +20,33 @@ class Node {
         this.next = null;
     }
 }
+
+
+class LinkedList {
+    // Linked List Implementation
+    constructor(value) {
+        this.head = {
+            values: value,
+            next: null,
+        }
+        this.tail = this.head;
+        this.length = 1;
+    }
+
+    append(value) {
+        const newNode = new Node(value);
+        this.tail.next = newNode;
+        this.tail = newNode;
+        this.length++;
+        return this;
+    }
+
+    prepend(value) {
+        this.head = {
+            value: value,
+            next: this.head,
+        };
+        this.length++;
+        return this;
+    }
+}
