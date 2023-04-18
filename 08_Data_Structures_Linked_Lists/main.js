@@ -11,3 +11,12 @@
 // console.log(obj2);
 
 ////////////////////////////////////////////////////////////////////////////////////
+// Implementing a linked list from scratch:
+
+class Node {
+    // Linked List Node Implementation
+    constructor(value) {
+        this.value = value;
+        this.next = null;
+    }
+}
