@@ -50,3 +50,10 @@ class LinkedList {
         return this;
     }
 }
+
+const ll = new LinkedList(10);
+// console.log(ll);
+ll.prepend(5);
+ll.append(16);
+ll.append(20);
+console.log(ll);
