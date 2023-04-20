@@ -48,6 +48,16 @@ class LinkedList {
         this.length++;
         return this;
     }
+
+    print() {
+        const array = [];
+        let currentNode = this.head;
+        while (currentNode !== null) {
+            array.push(currentNode.value);
+            currentNode = currentNode.next;
+        }
+        return array;
+    }
 }
 
 const ll = new LinkedList(10);
