@@ -58,6 +58,16 @@ class LinkedList {
         }
         return array;
     }
+
+    traverseToIndex(index) {
+        let counter = 0;
+        let currentNode = this.head;
+        while (counter !== index) {
+            currentNode = currentNode.next;
+            counter++;
+        }
+        return currentNode;
+    }
 }
 
 const ll = new LinkedList(10);
