@@ -81,6 +81,22 @@ class LinkedList {
         this.length++;
         return this.print();
     }
+
+    remove(index) {
+        if (index === 0) {  // first node
+            this.head = this.traverseToIndex(1);
+            delete this.traverseToIndex(0);
+        } else if (index === this.length - 1) { // Last node
+            this.traverseToIndex(index - 1).next = null;
+            delete this.traverseToIndex(index);
+        } else {    // A node in the middle of linked list
+            const beforeNode = this.traverseToIndex(index - 1);
+            beforeNode.next = this.traverseToIndex(index + 1);
+            delete this.traverseToIndex(index);
+        }
+        this.length--;
+        return this.print();
+    }
 }
 
 const ll = new LinkedList(10);
@@ -88,4 +104,5 @@ ll.prepend(5);
 ll.append(16);
 ll.append(20);
 ll.insert(2, 12);
+ll.remove(1);
 console.log(ll.print());
