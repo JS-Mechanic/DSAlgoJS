@@ -68,6 +68,19 @@ class LinkedList {
         }
         return currentNode;
     }
+
+    insert(index, value) {
+        if (index >= this.length) {
+            return this.append(value);
+        }
+        const newNode = new Node(value);
+        const nodeBefore = this.traverseToIndex(index - 1);
+        const pointerHolder = nodeBefore.next;
+        nodeBefore.next = newNode;
+        newNode.next = pointerHolder;
+        this.length++;
+        return this.print();
+    }
 }
 
 const ll = new LinkedList(10);
