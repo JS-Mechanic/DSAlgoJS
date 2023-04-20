@@ -84,8 +84,8 @@ class LinkedList {
 }
 
 const ll = new LinkedList(10);
-// console.log(ll);
 ll.prepend(5);
 ll.append(16);
 ll.append(20);
-console.log(ll);
+ll.insert(2, 12);
+console.log(ll.print());
