@@ -11,9 +11,9 @@
 // console.log(obj2);
 
 ////////////////////////////////////////////////////////////////////////////////////
-// Implementing a linked list from scratch:
+// Implementing a singly linked list from scratch:
 
-class Node {
+class SinglyNode {
     // Linked List Node Implementation
     constructor(value) {
         this.value = value;
@@ -22,19 +22,16 @@ class Node {
 }
 
 
-class LinkedList {
+class SinglyLinkedList {
     // Linked List Implementation
     constructor(value) {
-        this.head = {
-            value: value,
-            next: null,
-        }
+        this.head = new SinglyNode(value);
         this.tail = this.head;
         this.length = 1;
     }
 
     append(value) {
-        const newNode = new Node(value);
+        const newNode = new SinglyNode(value);
         this.tail.next = newNode;
         this.tail = newNode;
         this.length++;
@@ -42,7 +39,7 @@ class LinkedList {
     }
 
     prepend(value) {
-        const newNode = new Node(value);
+        const newNode = new SinglyNode(value);
         newNode.next = this.head;
         this.head = newNode;
         this.length++;
@@ -73,7 +70,7 @@ class LinkedList {
         if (index >= this.length) {
             return this.append(value);
         }
-        const newNode = new Node(value);
+        const newNode = new SinglyNode(value);
         const nodeBefore = this.traverseToIndex(index - 1);
         const pointerHolder = nodeBefore.next;
         nodeBefore.next = newNode;
@@ -99,7 +96,7 @@ class LinkedList {
     }
 }
 
-const ll = new LinkedList(10);
+const ll = new SinglyLinkedList(10);
 ll.prepend(5);
 ll.append(16);
 ll.append(20);
