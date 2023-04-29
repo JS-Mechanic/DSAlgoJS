@@ -199,3 +199,12 @@ class DoublyLinkedList {
         return currentNode;
     }
 }
+
+const dll = new DoublyLinkedList(10);
+dll.append(16);
+dll.prepend(1);
+dll.insert(2, 99);
+dll.remove(1);
+console.log(dll.print());
+console.log(dll);
+////////////////////////////////////////////////////////////////////////////////////
