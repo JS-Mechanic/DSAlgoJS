@@ -94,6 +94,22 @@ class SinglyLinkedList {
         this.length--;
         return this.print();
     }
+
+    reverse() {
+        if (this.length === 1) return this;
+        let first = this.head;
+        this.tail = this.head;
+        let second = first.next;
+        while (second) {
+            const tmp = second.next;
+            second.next = first;
+            first = second;
+            second = tmp;
+        }
+        this.head.next = null;
+        this.head = first;
+        return this;
+    }
 }
 
 const ll = new SinglyLinkedList(10);
