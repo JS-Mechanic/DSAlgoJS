@@ -119,6 +119,8 @@ ll.append(20);
 ll.insert(2, 12);
 ll.remove(1);
 console.log(ll.print());
+ll.reverse();
+console.log(ll.print());
 
 ////////////////////////////////////////////////////////////////////////////////////
 // Implementing a doubly linked list from scratch:
