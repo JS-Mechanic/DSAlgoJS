@@ -48,3 +48,16 @@ class Stack {
         return this.length === 0;
     }
 }
+
+const myStack = new Stack();
+myStack.push("google");
+myStack.push("udemy");
+myStack.push("discord");
+console.log(myStack.peak());
+console.log(myStack.isEmpty());
+console.log(myStack);
+console.log(myStack.pop());
+console.log(myStack.pop());
+console.log(myStack.pop());
+console.log(myStack);
+console.log(myStack.isEmpty());
