@@ -61,3 +61,24 @@ console.log(myStack.pop());
 console.log(myStack.pop());
 console.log(myStack);
 console.log(myStack.isEmpty());
+
+
+class StackArray {
+    constructor() {
+        this.values = [];
+    }
+    peak() {
+        return this.values.at(-1);
+    }
+    push(value) {
+        this.values.push(value);
+        return this;
+    }
+    pop() {
+        return this.values.pop();
+    }
+
+    isEmpty() {
+        return this.values.length === 0;
+    }
+}
