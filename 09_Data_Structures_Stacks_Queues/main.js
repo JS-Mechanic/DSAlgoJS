@@ -82,3 +82,13 @@ class StackArray {
         return this.values.length === 0;
     }
 }
+
+const myStackArray = new StackArray();
+console.log(myStackArray.isEmpty());
+myStackArray.push(1);
+myStackArray.push(2);
+myStackArray.push(3);
+console.log(myStackArray.pop());
+console.log(myStackArray.pop());
+console.log(myStackArray.isEmpty());
+console.log(myStackArray);
