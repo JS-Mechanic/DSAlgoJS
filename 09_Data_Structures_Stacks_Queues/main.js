@@ -92,3 +92,11 @@ console.log(myStackArray.pop());
 console.log(myStackArray.pop());
 console.log(myStackArray.isEmpty());
 console.log(myStackArray);
+
+
+class QueueNode {
+    constructor(value) {
+        this.value = value;
+        this.next = null
+    }
+}
