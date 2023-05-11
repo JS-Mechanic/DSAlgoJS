@@ -136,3 +136,14 @@ class Queue {
         return this.length === 0;
     }
 }
+
+const myQueue = new Queue();
+console.log(myQueue.isEmpty());
+myQueue.enqueue(1);
+myQueue.enqueue(2);
+myQueue.enqueue(3);
+console.log(myQueue.peak());
+console.log(myQueue);
+console.log(myQueue.dequeue());
+console.log(myQueue);
+console.log(myQueue.isEmpty());
