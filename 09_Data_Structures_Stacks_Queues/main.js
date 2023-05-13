@@ -49,19 +49,6 @@ class Stack {
     }
 }
 
-const myStack = new Stack();
-myStack.push("google");
-myStack.push("udemy");
-myStack.push("discord");
-console.log(myStack.peak());
-console.log(myStack.isEmpty());
-console.log(myStack);
-console.log(myStack.pop());
-console.log(myStack.pop());
-console.log(myStack.pop());
-console.log(myStack);
-console.log(myStack.isEmpty());
-
 
 class StackArray {
     constructor() {
@@ -82,16 +69,6 @@ class StackArray {
         return this.values.length === 0;
     }
 }
-
-const myStackArray = new StackArray();
-console.log(myStackArray.isEmpty());
-myStackArray.push(1);
-myStackArray.push(2);
-myStackArray.push(3);
-console.log(myStackArray.pop());
-console.log(myStackArray.pop());
-console.log(myStackArray.isEmpty());
-console.log(myStackArray);
 
 
 class QueueNode {
@@ -137,13 +114,42 @@ class Queue {
     }
 }
 
-const myQueue = new Queue();
-console.log(myQueue.isEmpty());
-myQueue.enqueue(1);
-myQueue.enqueue(2);
-myQueue.enqueue(3);
-console.log(myQueue.peak());
-console.log(myQueue);
-console.log(myQueue.dequeue());
-console.log(myQueue);
-console.log(myQueue.isEmpty());
+
+class QueueUsingTwoStacks {
+    constructor() {
+        this.enqueStack = [];
+        this.dequeueStack = [];
+    }
+
+    push(value) {
+        this.enqueStack.push(value);
+    }
+
+    pop() {
+        if (!this.dequeueStack.length) {
+            while(this.enqueStack.length) {
+                this.dequeueStack.push(this.enqueStack.pop());
+            }
+        }
+        return this.dequeueStack.pop();
+    }
+
+    peek() {
+        if (!this.dequeueStack.length) {
+            while(this.enqueStack.length) {
+                this.dequeueStack.push(this.enqueStack.pop());
+            }
+        }
+        return this.dequeueStack.at(-1);
+    }
+
+    isEmpty() {
+        return !this.enqueStack.length && !this.dequeueStack.length;
+    }
+
+    clear() {
+        this.enqueStack = [];
+        this.dequeueStack = [];
+        return this;
+    }
+}
