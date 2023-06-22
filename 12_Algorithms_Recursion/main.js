@@ -53,3 +53,12 @@ function fibonacciIterative(n) {    // O(n)
 }
 
 console.log(fibonacciIterative(12));
+
+
+// Reverse String Using recursion:
+function ReverseStringUsingRecursion(str) {
+    if (str === "") return "";
+    return ReverseStringUsingRecursion(str.substring(1)) + str.charAt(0);
+}
+
+console.log(ReverseStringUsingRecursion("JavaScript"));
