@@ -42,3 +42,21 @@ function selectionSort(arr) {
 
 const ssResult = selectionSort(numbers);
 console.log(ssResult);
+
+
+function insertionSort(nums) {
+	const length = nums.length;
+	for (let i = 1; i < length; i++) {
+		let currentValue = nums[i];
+		let j = i - 1;
+		while (j >= 0 && nums[j] > currentValue) {
+			nums[j + 1] = nums[j];
+			j--;
+		}
+		nums[j + 1] = currentValue;
+	}
+	return nums;
+}
+
+const sortedArray = insertionSort(numbers);
+console.log(sortedArray);
