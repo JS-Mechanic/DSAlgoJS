@@ -7,7 +7,7 @@ console.log(basket.sort());
 console.log(basket.sort((a, b) => a - b));
 console.log(basket.sort((a, b) => b - a));
 
-// Bubble SortImplementation:
+// Bubble Sort Implementation:
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
 function bubbleSort(nums) {
@@ -22,7 +22,23 @@ function bubbleSort(nums) {
 			}
 		}
 	}
+	return nums;
 }
 
-bubbleSort(numbers);
-console.log(numbers);
+const bsResult = bubbleSort(numbers);
+console.log(bsResult);
+
+function selectionSort(arr) {
+	const length = arr.length;
+	for (let i = 0; i < length - 1; i++) {
+		let minIndex = i;
+		for (let j = i + 1; j < length; j++) {
+			if (arr[j] < arr[minIndex]) minIndex = j;
+		}
+		if (minIndex !== i) [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+	}
+	return arr;
+}
+
+const ssResult = selectionSort(numbers);
+console.log(ssResult);
