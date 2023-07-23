@@ -8,7 +8,7 @@ console.log(basket.sort((a, b) => a - b));
 console.log(basket.sort((a, b) => b - a));
 
 // Bubble Sort Implementation:
-const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+let numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
 function bubbleSort(nums) {
 	// Time complexity: O(n^2) and space complexity: O(1)
@@ -28,6 +28,9 @@ function bubbleSort(nums) {
 const bsResult = bubbleSort(numbers);
 console.log(bsResult);
 
+
+numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+
 function selectionSort(arr) {
 	const length = arr.length;
 	for (let i = 0; i < length - 1; i++) {
@@ -43,6 +46,8 @@ function selectionSort(arr) {
 const ssResult = selectionSort(numbers);
 console.log(ssResult);
 
+
+numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
 function insertionSort(nums) {
 	const length = nums.length;
@@ -60,3 +65,37 @@ function insertionSort(nums) {
 
 const sortedArray = insertionSort(numbers);
 console.log(sortedArray);
+
+
+numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
+
+function mergeSort(arr) {
+	if (arr.length < 2) {
+		return arr;
+	}
+
+	const middle = Math.floor(arr.length / 2);
+	const left = arr.slice(0, middle);
+	const right = arr.slice(middle);
+
+	return merge(
+		mergeSort(left),
+		mergeSort(right)
+	);
+}
+
+function merge(left, right) {
+	const result = [];
+
+	while (left.length && right.length) {
+		if (left[0] < right[0]) {
+			result.push(left.shift());
+		} else {
+			result.push(right.shift());
+		}
+	}
+
+	return [...result, ...left, ...right];
+}
+
+console.log(mergeSort(numbers));
