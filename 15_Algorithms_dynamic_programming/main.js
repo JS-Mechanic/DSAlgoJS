@@ -41,3 +41,24 @@ console.log(`${numCalculationsRegularFib} operations have been done for calculat
 
 ////////////////////////////////////////////////////////////////////////////////////
 console.log("-".repeat(50));
+
+const fibCache = {};
+let numCalculationsMemoizedFib = 0
+
+function memoizedFibonacci(n) {
+    // Time complexity: O(n)
+    if (n in fibCache) return fibCache[n];
+    else {
+        if (n < 2) return n;
+        numCalculationsMemoizedFib++;
+        fibCache[n] =  memoizedFibonacci(n - 1) + memoizedFibonacci(n - 2);
+        return fibCache[n];
+    }
+}
+
+const memoizedFib30 = memoizedFibonacci(30);
+console.log(`Fib(30): ${memoizedFib30}`);
+console.log(`${numCalculationsMemoizedFib} operations have been done for calculating fib(30)`);
+
+////////////////////////////////////////////////////////////////////////////////////
+console.log("-".repeat(50));
